@@ -1,0 +1,35 @@
+ Sum of Digit is Pallindrome or not
+ https://practice.geeksforgeeks.org/problems/sum-of-digit-is-pallindrome-or-not2751/1#
+ soln:
+ public:
+    int isDigitSumPalindrome(int N) {
+        
+        int sum=0;
+        while(N)
+        {
+          sum+=(N%10);
+          N=N/10;
+        }
+       // cout<<sum;
+        string s;
+        while(sum)
+        {
+            s+=(sum%10)+48;
+            sum=sum/10;
+        }
+        int n=s.size();
+      //  cout<<n<<"nsize";
+        for(int i=0;i<(n)/2;i++)
+        {
+          //  cout<<"hai";
+            if(s[i]==s[n-i-1])
+            {
+                continue;
+            }
+            else
+            {
+            return 0;}
+        }
+        return 1;
+    }
+};
