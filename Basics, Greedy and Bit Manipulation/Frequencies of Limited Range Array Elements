@@ -1,0 +1,20 @@
+Frequencies of Limited Range Array Elements
+
+//https://practice.geeksforgeeks.org/problems/frequency-of-array-elements-1587115620/1
+void frequencyCount(vector<int>& arr,int n, int P)
+    { 
+        // code here
+        map<int,int>m;
+        for(int i=1;i<=n;i++)
+        {
+         m[arr[i-1]]++;
+        }
+        
+        for(int i=1;i<=n;i++)
+        {
+            arr[i-1]=m[i];
+        }
+        
+    
+    }
+};
